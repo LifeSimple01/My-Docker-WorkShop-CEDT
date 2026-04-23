@@ -9,6 +9,7 @@ FROM node:20.11-slim AS builder
 WORKDIR /app
 
 COPY app/package.json app/package-lock.json ./
+
 RUN npm ci --omit=dev
 
 COPY app/ .
